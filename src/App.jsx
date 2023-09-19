@@ -1,6 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+//Layouts
+import LayoutAuth from "./layouts/LayoutAuth"
+
+//Pages
+import Login from "./pages/auth/Login"
+
 function App() {
   return (
-    <div className="bg-red-300">Leonardo</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LayoutAuth />}>
+          <Route index element={<Login />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
